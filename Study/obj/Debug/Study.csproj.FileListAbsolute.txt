@@ -1,0 +1,7 @@
+C:\sb\unity\Study\bin\Debug\Study.exe.config
+C:\sb\unity\Study\bin\Debug\Study.exe
+C:\sb\unity\Study\bin\Debug\Study.pdb
+C:\sb\unity\Study\obj\Debug\Study.csproj.AssemblyReference.cache
+C:\sb\unity\Study\obj\Debug\Study.csproj.CoreCompileInputs.cache
+C:\sb\unity\Study\obj\Debug\Study.exe
+C:\sb\unity\Study\obj\Debug\Study.pdb
