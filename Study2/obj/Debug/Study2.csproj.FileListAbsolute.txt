@@ -1,0 +1,7 @@
+C:\sb\unity\Study2\bin\Debug\Study2.exe.config
+C:\sb\unity\Study2\bin\Debug\Study2.exe
+C:\sb\unity\Study2\bin\Debug\Study2.pdb
+C:\sb\unity\Study2\obj\Debug\Study2.csproj.AssemblyReference.cache
+C:\sb\unity\Study2\obj\Debug\Study2.csproj.CoreCompileInputs.cache
+C:\sb\unity\Study2\obj\Debug\Study2.exe
+C:\sb\unity\Study2\obj\Debug\Study2.pdb
