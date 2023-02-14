@@ -19,7 +19,7 @@ namespace Study             // namespace 이름 선언.
 			//Console.ReadKey();              // ReadKey: 키 입력을 기다리는 메소드
 
 			// 문제
-			// "여러분, ", "안녕하세요?", "반갑습니다!"
+			// "여러분, ", "안녕하세요?", "반갑습니다!"  -> Write, WriteLine 3번쓰기
 
 			// 콘솔창에 출력 결과
 			// 여러분, 안녕하세요?
