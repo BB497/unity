@@ -53,7 +53,54 @@ namespace Day2_1
 			Console.WriteLine(var_b);       // sbyte의 데이터 범위 초과로 오버플로우 발생: var_b의 값은 -128로 출력됨.
 			Console.WriteLine();
 
+			// float 과 int 사이의 자료형 변환
+			float fl_a = 0.09f;
+			int in_b = (int)fl_a;			// float -> int 변환의 경우 소수점 아래로 다 날림.
+			Console.WriteLine(in_b);
 
+			float fl_x = 1.1f;
+			int in_y = (int)fl_x;
+			Console.WriteLine(in_y);
+
+
+			// string format: 문자열에 데이터를 표시하기 위해. ex) printf("어쩌고: %d", a);
+			// string.Format(문자열, 인자1, 인자2, ....);
+			//		string: 클래스
+			//		Format: 
+
+			string str_x = "으악";
+			string str_y = "ㅁㄴㅇㄻㄴㅇㄹ";
+			int sth = 123;
+			string str1 = string.Format("{0} {1} {2}", str_x, str_y, sth);
+			string str2 = string.Format("{1} {2} {0}", str_x, str_y, sth);		// 순서가 바뀜.
+			Console.WriteLine(str1);
+			Console.WriteLine(str2);
+			Console.WriteLine();
+
+
+			// 문자열을 숫자로 변환 -> "변환" 하는 것이기 때문에 문자열 변환시 알맞은 자료형을 선택해야 함.
+			string s1 = "12345";
+			string s2 = "3.14125";
+
+			int i1 = int.Parse(s1);
+			string str = string.Format("i1: {0}", i1);
+			Console.WriteLine(str);
+			Console.WriteLine(string.Format("i1: {0}", i1));
+
+			float f1 = float.Parse(s2);
+			bool b1 = bool.Parse("true");				// string을 bool로 변환
+			Console.WriteLine(string.Format("f1: {0}", f1));
+			Console.WriteLine(string.Format("b1: {0}", b1));
+			Console.WriteLine();
+
+			// 숫자를 문자열로(반대로)
+			string s1_1 = i1.ToString();        // i1을 문자열로 변환.
+			string s2_1 = f1.ToString();        // f1을 문자열로 변환.
+			string b1_1 = b1.ToString();		// b1을 문자열로 변환.
+
+			Console.WriteLine(string.Format("s1_1: {0}", s1_1));
+			Console.WriteLine(string.Format("s2_1: {0}", s2_1));
+			Console.WriteLine(string.Format("b1_1: {0}", b1_1));
 		}
 	}
 }
