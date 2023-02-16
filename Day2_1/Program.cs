@@ -101,6 +101,71 @@ namespace Day2_1
 			Console.WriteLine(string.Format("s1_1: {0}", s1_1));
 			Console.WriteLine(string.Format("s2_1: {0}", s2_1));
 			Console.WriteLine(string.Format("b1_1: {0}", b1_1));
+			Console.WriteLine();
+
+
+			// object
+			//			모든 객체의 조상
+			//			모든 객체를 담을 수 있음.
+			//			모든 데이터 형식은 object에 상속되어 있기 때문.
+
+			// 값 형식
+			//		함수의 인자로 전달했을 때, 데이터에 접근이 불가능
+			//		직렬화 안됨.
+			//		주소의 전달이 불가능.
+
+			// 참조 형식
+			//		함수의 인자로 전달하면 데이터에 접근이 가능하다.
+			//		직렬화 가능.
+			//		주소의 전달이 가능.
+
+			object a = 123;		// 박싱: 값 형식 -> 참조 형식
+			object b = 3.14;
+			object c = true;
+			object d = "hi";
+
+			int i_a = (int)a;   // 언박싱: 참조 형식 -> 값 형식
+			b = i_a;            // 123
+			Console.WriteLine(a);
+			Console.WriteLine(b);
+			Console.WriteLine(c);
+			Console.WriteLine(d);
+
+			// 상수(const) 와 열거 형식(enum)
+			//		선언 이후 데이터를 절대로 수정할 수 없음.
+			//		절대 바뀌면 안되는 값을 개발자의 실수로 변경되지 않도록 해줌.
+			//		코드 영역에서 빠져나가면 소멸함 -> 전체 코드에서 사용해야 하면 전역변수로 써야함.
+
+			// 상수의 선언 방법.
+			//		const 자료형 변수이름 = 데이터;
+			//		반드시 선언과 초기화를 같이 해야함. -> 나중에 수정이 안돼서.
+
+			const int A = 1;
+			const float B = 2.14f;
+			const string C = "abc";
+
+			Console.WriteLine(A);
+			// A = 123;  << 불가능!!
+
+			// 열거 형식(enum)
+			//		다수의 상수를 그룹화하여 구현할 때에 사용.
+			// const int BUTTON_SELECT_CONFIRM = 0;
+			// const int BUTTON_SELECT_Y = 1;
+			// const int BUTTON_SELECT_N = 2;
+
+			// 위의 것을 enum으로 나열 -> 코드 영역 바깥에 선언
+
+			// enum BUTTON_SELECT
+			// {
+			//		CONFIRM,
+			//		YES,
+			//		NO,
+			// }
+
+			// enum 열거형 이름
+			// {
+			//		열거 상수
+			// }
 		}
 	}
 }
