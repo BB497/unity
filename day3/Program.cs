@@ -150,6 +150,51 @@ namespace day3
 			//	조건식3이 참이면 실행되는 코드
 			// else
 			//	조건식 123이 모두 거짓이면 실행되는 코드
+
+			// 조건문 switch
+			// switch는 표현식이 가질수 있는 다양한 결과를 한번에 처리할때 사용.
+			// switch(표현식)
+			//	{
+			//		case 1:
+			//				표현식 결과가 상수1과 같다면 실행되는 코드.
+			//				...
+			//				...
+			//			break;		<< break: switch문을 빠져나온다.
+			//		case 2:
+			//			break;
+			//		default:		<< default: if문의 else와 동일한 기능
+			//			break;
+			//	}
+
+			// ReadLine: 콘솔창에서 한줄 입력 받아서 문자열로 반환.
+			// Parse(문자열): 문자열을 int자료형으로 변경. 문자열이 숫자가 아니면 예외 발생.
+			Console.Write("1,2,3 중의 숫자를 입력하시오: ");
+			int num = int.Parse(Console.ReadLine());
+				switch (num)
+				{
+					case 1:
+						Console.WriteLine("1 입력하였습니다.");
+						break;
+					case 2:
+						Console.WriteLine("2 입력하였습니다.");
+						break;
+					case 3:
+						Console.WriteLine("3 입력하였습니다.");
+						break;
+					default:
+						Console.WriteLine("1,2,3 외의 숫자를 입력하였습니다.");
+						break;
+				}
+
+			// Console.Write("요일을 입력하세요: ");
+			// string day = Console.ReadLine();
+			// switch(day)
+			// {
+			// 	case "월":
+			// 		break;
+			// }																<< C#은 case문에 문자열 등 여러가지 가능함.
+
+
 		}
 	}
 }
