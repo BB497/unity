@@ -1,0 +1,7 @@
+C:\sb\unity\day4_Q\bin\Debug\day4_Q.exe.config
+C:\sb\unity\day4_Q\bin\Debug\day4_Q.exe
+C:\sb\unity\day4_Q\bin\Debug\day4_Q.pdb
+C:\sb\unity\day4_Q\obj\Debug\day4_Q.csproj.AssemblyReference.cache
+C:\sb\unity\day4_Q\obj\Debug\day4_Q.csproj.CoreCompileInputs.cache
+C:\sb\unity\day4_Q\obj\Debug\day4_Q.exe
+C:\sb\unity\day4_Q\obj\Debug\day4_Q.pdb
