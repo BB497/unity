@@ -98,6 +98,77 @@ namespace day4
 				Console.Write(num2);
 			}
 
+			// 무한 루프
+			// for( ; ; )
+			// while(true)
+
+			// break, continue
+			//		코드의 흐름을 끊고 프로그램 실행 위치를 도약 시킬 수 있다.
+
+			// break
+			//		break 는 반복문이나 switch에서 벗어날 때 사용한다.
+
+			// continue
+			//		continue 는 반복문을 다시 수행하게 하는 기능이다.
+
+			int num3 = 0;
+			while(true)
+			{
+				if (num3 > 10)				// num3 == 10 이면
+					break;					// break
+				Console.WriteLine(num3++);
+			}
+			Console.WriteLine();
+
+			while(true)
+			{
+				Console.Write("continue?  Y/N\n");
+				string answer = Console.ReadLine();
+
+				// Equals 는 데이터가 같은지 비교하는 메소드
+				// 문자열의 경우 == 말고 Equals를 사용해야 한다.
+				if (answer.Equals("N"))
+					break;
+				else if (answer.Equals("Y"))
+					continue;
+				else
+					Console.WriteLine("You've entered {0}, Please enter Y or N\n", answer);
+					continue;
+			}
+
+			for(int i = 0; i < 10; i++)
+			{
+				if (i % 2 == 0)
+					continue;
+				Console.WriteLine("{0}은 홀수입니다.", i);
+			}
+
+			// 문제
+			// 1. 다음을 출력하는 프로그램을 작성하시오. (for)
+			//			- 출력 결과.
+			//			 *
+			//			***
+			//		   *****
+			//		  *******
+
+			// 2. while로 작성하라
+			//		  *******
+			//		   *****
+			//			***
+			//			 *
+
+			// 3,4 다음 프로그램을 작성하시오(for, while 각각 작성.)
+
+			//	 -출력 결과 A
+			//		몇 번 반복할까요??   >> 0
+			//		0으로는 반복문을 수행 할 수 없습니다.
+			//   -출력 결과 B
+			//		몇 번 반복할까요??	>> 10
+			//			*
+			//		   ***
+			//		  *****
+			//		 *******
+			//          ... 
 
 
 
