@@ -29,22 +29,40 @@ namespace day5
 			// return
 			//		메소드 중간에 언제든지 호출되어 메소드를 종료시키고, 코드의 흐름을 호출자에게 돌려준다.
 
-
-			// 재귀 호출.
-			//		자기 자신의 메소드를 호출하는 것을 말한다.
-
-
 			int result1 = Plus(2, 7);
 			int result2 = Minus(10, 5);
 			Begin();
 			Console.WriteLine("Hello World!");
 			Console.WriteLine("Plus Method Called: {0}\nMinus Method Called: {1}\n", Plus(1, 5), Minus(5, 2));
+			Console.WriteLine("int result1: {0}\nint result2: {1}\n", result1, result2);
 
 			// 메소드 오버로딩
 			//		동일한 기능을 가진 메소드의 작명에 대한 고민을 해결해주고 코드가 일관성 있게 유지되도록 돕는다.
 			//		특징: 동일한 메소드명을 선언할 수 있다. (매개변수의 갯수 또는 함수의 형식이 달라야 한다).
+			Console.WriteLine("메소드 오버로딩");
 			Console.WriteLine("Plus overloaded Method2 : {0}", Plus(3, 2, 5));			// 메소드 오버로딩
 			Console.WriteLine("Plus overloaded Method3: {0}\n", Plus(2.54, 2.43));       // 메소드 오버로딩
+
+
+
+			// 명명된 매개변수 : 인자에 매개변수 이름을 적어 직접 매개변수에 값을 전달.
+			//		매개변수명을 작성하지 않으면 순서대로 전달됨.
+			Console.WriteLine("명명된 매개변수");
+
+			PrintProfile("김수한무", 13);
+			PrintProfile(name: "마리오", age: 9);
+			PrintProfile(age: 10, name: "피자");			// 순서가 이상하지만, 매개변수가 명명되었기 때문에 올바르게 전달이 된다.
+			PrintProfile("김수한무", age: 24);          // 명명하지 않는 경우: 순서에 맞춰 들어감		
+														// PrintProfile("age: 24, 김수한무"); << 에러 발생.
+
+			Console.WriteLine();
+
+			// 선택적 매개변수: 매개변수를 입력받지 않았을 경우 메소드에서 직접 초기화.
+			//		매개변수를 초기화하면 그 우측부터의 매개변수에는 초기화하지 않은 것을 작성할 수 없다.
+
+
+
+
 
 			// 가변길이 매개 변수
 			//		params 키워드
@@ -52,7 +70,9 @@ namespace day5
 			Console.WriteLine("가변길이 매개변수: 3 + 2 + 5 + ... + = {0}\n", Plus(3, 2, 1, 2, 4, 2, 5, 1, 3, 5, 2, 3, 5, 1, 2, 5, 32, 4, 2, 0));
 
 
-			Console.WriteLine("int result1: {0}\nint result2: {1}\n", result1, result2);
+
+			// 재귀 호출.
+			//		자기 자신의 메소드를 호출하는 것을 말한다.
 			PrintCount(5);
 
 
@@ -75,14 +95,13 @@ namespace day5
 			//			어떠한 값을 저장한다.
 
 
+
+
 			int a = 5, b = 3, c, d;
 			Console.WriteLine("a: {0}, b: {1}", a, b);
 			Swap_ref(ref a, ref b);         // ref로 호출하는 경우: a, b에 있는 값을 활용하여 메소드가 동작함.
 											// a, b에 어떠한 값을 저장한다.
 			Console.WriteLine("a: {0}, b:{1}\n", a, b);
-
-			Swap_out(out c, out d);			// out으로 호출하는 경우: a, b에 어떠한 값이 있어도 상관 없다.
-											// a와 b에 어떠한 값을 저장한다.
 
 			//		0. Swap함수 진입.
 			//		1. ref, out: Stack 영역에 a와 b의 주소를 생성.
@@ -93,7 +112,13 @@ namespace day5
 			//		6. Stack에 남아있던 a, b의 값이 변경됨.
 			//		7. Swap함수 종료 후 Swap에서 쓰인 모든 변수 파괴. Heap파괴.
 
+
+			Swap_out(out c, out d);			// out으로 호출하는 경우: a, b에 어떠한 값이 있어도 상관 없다.
+											// a와 b에 어떠한 값을 저장한다.
+
+
 			End();
+			Console.ReadKey();
 		}
 
 
@@ -110,24 +135,33 @@ namespace day5
 			Console.WriteLine("Program Begin..");
 			// void: return하지 않음
 		}
-
 		private static void End()
 		{
 			Console.WriteLine("Program End..");
 		}
 
+		// int형 메소드
 		private static int Plus(int a, int b)		// int형 반환타입, 매개변수 a, b
 		{
 			return a + b;       // return: 값을 반환 후 종료.
 			End();		// << return 후 종료되었기 때문에 실행되지 않음.
 		}
+		private static int Minus(int a, int b)
+		{
+			return a - b;
+		}
 
-	
 		// 메소드 오버로딩
 		// 매개변수의 갯수가 다른 경우.
 		private static int Plus(int a, int b, int c) { return a + b + c; }
 		// 매개변수의 타입이 다른 경우.
 		private static double Plus(double a, double b) { return a + b; }
+
+		// 명명된 매개변수.
+		private static void PrintProfile(string name, int age)
+		{
+			Console.WriteLine("Name: {0},	Age: {1}", name, age);
+		}
 
 
 
@@ -140,13 +174,6 @@ namespace day5
 				sum += nums[i];
 			}
 			return sum;
-		}
-		
-
-		// int형 메소드
-		private static int Minus(int a, int b)
-		{
-			return a - b;
 		}
 
 
