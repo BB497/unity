@@ -27,6 +27,7 @@ namespace day4_Q
 
 			Console.WriteLine();
 			Console.ReadKey();
+			Console.WriteLine();
 
 
 			//2
@@ -35,9 +36,9 @@ namespace day4_Q
 			while (a >= 0)// 3210
 			{
 				int c = 0;
-				while (c>3) // 0
+				while (c<3-a) // 0
 				{
-					Console.Write("@");
+					Console.Write(" ");
 					c++;
 				}
 
@@ -73,9 +74,13 @@ namespace day4_Q
 					}
 					Console.WriteLine();
 				}
-				if (num == 0)
-					Console.WriteLine("0으로는 반복문을 수행할 수 없어요.");
-				continue;
+
+				if (num == 0) {
+					Console.Write("0으로는 반복문을 수행할 수 없어요.\n");
+					break;
+					}
+				else
+					continue;
 			}
 
 
