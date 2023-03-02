@@ -60,6 +60,10 @@ namespace day5
 			// 선택적 매개변수: 매개변수를 입력받지 않았을 경우 메소드에서 직접 초기화.
 			//		매개변수를 초기화하면 그 우측부터의 매개변수에는 초기화하지 않은 것을 작성할 수 없다.
 
+			PrintProfile2();
+			PrintProfile2(age: 15);
+			PrintProfile2(name: "ㅎㅎ");
+
 
 
 
@@ -163,6 +167,12 @@ namespace day5
 			Console.WriteLine("Name: {0},	Age: {1}", name, age);
 		}
 
+
+		// 선택적 매개변수
+		private static void PrintProfile2(string name = "엥", int age = 6)
+		{
+			Console.WriteLine("Name = {0}, Age = {1}", name, age);
+		}
 
 
 		// 가변길이 매개 변수
