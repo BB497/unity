@@ -105,14 +105,36 @@ namespace day6
 			Console.WriteLine("{0}", isEven);
 			Console.WriteLine();
 
+			// Clear(배열, 시작_인덱스, 길이);				// 배열의 요소를 초기화 (숫자 0, bool false, 객체 null)
+			Console.WriteLine("Clear();");
+			Array.Clear(sorts, 1, 3);           // 인덱스 1부터 3개 요소 초기화
+			foreach (int n in sorts)
+				Console.Write("{0}", n);
+			Console.WriteLine();
+
+			// Foreach<Type>(배열, 대리자);					// 대리자에 요소를 순차적으로 전달 foreach 와 유사
+			Console.Write("Foreach<T>();");
+			Array.ForEach(sorts, PrintNum);
+			Console.WriteLine();
+
+
+
 
 			//	- 인스턴스
+			//		배열_변수.Length: 배열의 길이 반환
+			//		배열_변수.GetLength(치수); : 배열의 길이 반환 (다차원 배열)
+			//		배열_변수.Rank;			: 배열의 차원 반환 (몇차원인지)
 
 		}
 
 		static bool IsEven(int num)
 		{
 			return num % 2 == 0;
+		}
+
+		static void PrintNum(int num)
+		{
+			Console.Write("{0} ", num);
 		}
 	}
 }
