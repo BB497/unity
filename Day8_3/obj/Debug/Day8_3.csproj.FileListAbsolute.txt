@@ -1,0 +1,6 @@
+C:\sb\unity\Day8_3\bin\Debug\Day8_3.exe.config
+C:\sb\unity\Day8_3\bin\Debug\Day8_3.exe
+C:\sb\unity\Day8_3\bin\Debug\Day8_3.pdb
+C:\sb\unity\Day8_3\obj\Debug\Day8_3.csproj.CoreCompileInputs.cache
+C:\sb\unity\Day8_3\obj\Debug\Day8_3.exe
+C:\sb\unity\Day8_3\obj\Debug\Day8_3.pdb
