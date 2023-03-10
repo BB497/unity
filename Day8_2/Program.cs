@@ -11,7 +11,7 @@ namespace Day8_2
 		static void Main(string[] args)
 		{
 			// 클래스(객체)
-			//		상속성, 다향성, 은식성
+			//		상속성, 다형성, 은닉성
 
 			// 얕은 복사, 깊은 복사
 			//	>> 얕은 복사
